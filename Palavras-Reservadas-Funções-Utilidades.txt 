@@ -1,0 +1,52 @@
+putStrLn : pega uma string e retorna uma ação de I/O. Ou imprime em formato String com quebra de linha.
+
+putStr: recebe uma string como parâmetro e retorna uma ação. ou imprime em formato String sem quebra de linha.
+
+putChar: pega um caractere e retorna uma ação de I/O que o imprimirá no terminal. sem quebra de linha.
+
+getChar: é uma ação de I/O que lê um caractere do dispositivo de entrada. 
+
+do : una várias ações de tipo I/O em uma ação só.
+
+when: Ela pega um valor booleano e uma ação de I/O , se o valor booleano for True, retorna a mesma ação de I/O que nós passamos.
+faz parte de Control.Monad (então, escreva import Control.Monad para acessá-la).
+
+forever: pega uma ação de I/O e retorna uma ação de I/O que somente repete para sempre a ação de I/O passada.
+Ela faz parte de Control.Monad.
+
+getLine : valor de input pelo teclado.
+
+sequence: pega uma lista de ações de I/O e retorna uma ação de I/O que irá executar as ações passadas uma após a outra.
+o resultado é geralmente em uma lista  sequence :: [IO a] -> IO [a] 
+
+forM: (localizada em Control.Monad) O primeiro parâmetro é a lista e o segundo é a função que será usada para mapear a lista, que será então sequenciada.
+
+let: associações in expressão, em que associações são nomes que serão utilizados
+em uma expressão e expressão é a expressão a ser avaliada que utilizará esses nomes.
+
+map: mapear elemento da lista.
+
+mapM : pega uma função e uma lista, mapeia a lista com a função e então sequencia o mapeamento.
+mapM print [1,2,3] 
+resultado: 
+1  
+2  
+3  
+[(),(),()] 
+
+mapM_ faz o mesmo, mas descarta o resultado no final.
+mapM_ print [1,2,3] 
+resultado: 
+1  
+2  
+3  
+
+toUpper: Colocar em letras Maíuscula.
+
+words: gera uma lista de palavra (pegar uma String ou phrase para gerar uma lista de palavra).
+
+unwords: pegar uma lista de palavras para gerar um String.
+
+print: pega um valor de qualquer tipo que seja uma instância de Show. ( putStrLn . show)
+
+show: pega qualquer valor e converte ela em String
