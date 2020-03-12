@@ -14,7 +14,11 @@ faz parte de Control.Monad (então, escreva import Control.Monad para acessá-la
 forever: pega uma ação de I/O e retorna uma ação de I/O que somente repete para sempre a ação de I/O passada.
 Ela faz parte de Control.Monad.
 
-getLine : valor de input pelo teclado.
+getChar: é uma ação de I/O que lê um único caractere do terminal.
+
+getLine: é uma ação de I/O que lê uma linha do terminal. 
+
+getContents: é uma ação de I/O que lê qualquer coisa do dispositivo de entrada padrão até encontrar um caractere de fim de arquivo. 
 
 sequence: pega uma lista de ações de I/O e retorna uma ação de I/O que irá executar as ações passadas uma após a outra.
 o resultado é geralmente em uma lista  sequence :: [IO a] -> IO [a] 
